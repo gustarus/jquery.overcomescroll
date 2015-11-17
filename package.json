@@ -1,6 +1,6 @@
 {
   "name": "jquery.overcomescroll",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Overcome plugin for jQuery.",
   "main": "plugin.js",
   "scripts": {

@@ -19,6 +19,7 @@
   var defaults = {
     thresholdEl: null,
     thresholdOffset: 0,
+    throttleInterval: 100,
     overcomeClass: 'overcomeScroll'
   };
 
@@ -38,7 +39,7 @@
 
       // событие - скролл страницы
       onScrollHandler();
-      $window.on('scroll', throttle(onScrollHandler, 100));
+      $window.on('scroll', throttle(onScrollHandler, custom.throttleInterval));
     });
   };
 
