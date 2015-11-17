@@ -28,6 +28,11 @@
       var $node = $(this);
       var custom = $.extend({}, defaults, options);
 
+      // приводим элемент к объекту jquery
+      if(custom.thresholdEl && typeof custom.thresholdEl !== $) {
+        custom.thresholdEl = $(custom.thresholdEl)
+      }
+
       function onScrollHandler() {
         // проверяем, проскроллена ли страница до нужной границы
         if ($window.scrollTop() >= ((custom.thresholdEl ? custom.thresholdEl.offset().top : 0) + custom.thresholdOffset)) {
